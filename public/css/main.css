@@ -1,0 +1,48 @@
+/* 
+    Created on : 29-Apr-2016, 09:17:13
+    Author     : Ameer
+*/
+
+body{
+    font-family: 'Open Sans';
+    font-size: 12px
+}
+
+.panel-hash > .panel-heading {
+  color: #fff;
+  background-color: #333;
+}
+
+.panel-hash > .panel-heading .badge {
+  color: #f5f5f5;
+  background-color: #333;
+}
+
+.bg-hash{
+    background-color: #f7f7f7;
+}
+
+.pgBtnPrev, .pgBtnNxt{
+    min-width: 75px;
+    max-width:75px
+}
+
+.lil-top-space{
+    margin-top:5px
+}
+
+.modal-table > tbody > tr > td,
+.modal-table > tbody > tr > th
+{
+	line-height: 1 !important;
+}
+
+
+.modal-img{
+	max-height:120px;
+}
+
+
+.modal-logo{
+	max-height: 70px
+}
