@@ -44,17 +44,36 @@ else{
         <link rel="shortcut icon" href="public/img/favicon.ico">
         <!-- favicon ends --->
 		
-        <link href="public/bootstrap/css/bootstrap-theme.min.css" rel="stylesheet">
-        <link href="public/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="public/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="public/font-awesome/css/font-awesome-animation.min.css" rel="stylesheet">
-        <link href="public/css/main.css" rel="stylesheet">
-        <link href="public/css/open_sans.css" rel="stylesheet">
-        
+		<?php if($_SERVER['HTTP_HOST'] == "localhost" || (stristr($_SERVER['HTTP_HOST'], "192.168.") !== FALSE)|| (stristr($_SERVER['HTTP_HOST'], "127.0.0.") !== FALSE)): ?>
+        <link rel="stylesheet" href="public/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="public/bootstrap/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="public/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="public/font-awesome/css/font-awesome-animation.min.css">
+
         <script src="public/js/jquery.min.js"></script>
         <script src="public/bootstrap/js/bootstrap.min.js"></script>
-        <script src="public/js/webcamjs/webcam.min.js"></script>
+
+        <?php else: ?>
+		
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.8/font-awesome-animation.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <?php endif; ?>
+		
+		<!--Custom styles -->
+		<link href="public/css/main.css" rel="stylesheet">
+        
+		<!--Custom js -->
+		<script src="public/js/webcam.min.js"></script><!-- Loaded locally (default error removed)-->
         <script src="public/js/main.js"></script>
+		
+		<!-- Google font-->
+        <link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Cabin|PT+Sans' rel='stylesheet' type='text/css'>
     </head>
     
     
