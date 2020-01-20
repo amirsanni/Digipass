@@ -5,4 +5,4 @@ A small web app for managing incoming and outgoing visitors. Inspired by the _'v
 - Chrome 50 and above require HTTPS in order to use media devices
 
 # Demo
-View demo [here] (https://1410inc.xyz/digipass/)
+View demo at https://1410inc.xyz/digipass/
