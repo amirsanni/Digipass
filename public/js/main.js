@@ -1,5 +1,5 @@
 'use strict';
-var ar = setAppRoot("digipass", "");
+var ar = setAppRoot("digipass", "digipass");
 var global = {appRoot:ar};
 
 $(document).ready(function(){
