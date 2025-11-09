@@ -65,11 +65,8 @@ class Visitors {
         //move the files to the final destination and insert details in db
         file_put_contents("visitors/".$file_name, $decoded_image);
         
-        //set the url
-        $img_url = "visitors/".$file_name;
-        
         try{
-            $inserted_id = $this->db_obj->insertNewVisitor($name, $email, $phone, $from, $to_see, $img_url);
+            $inserted_id = $this->db_obj->insertNewVisitor($name, $email, $phone, $from, $to_see, $file_name);
         
             if($inserted_id){
                 $data_to_return = ['status'=>1, 'id'=>$inserted_id, 'cit'=>date('jS M, Y h:i:s a')];

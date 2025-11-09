@@ -241,12 +241,12 @@ else {
                                                 <td class="vVPassToSee"><?= $get['to_see'] ?></td>
                                                 <td class="vVPassCheckIn"><?= date('jS M, Y h:i:sa', strtotime($get['check_in_time'])) ?></td>
                                                 <td class="vVPassCheckOut">
-                                                    <?= $get['check_out_time'] != "0000-00-00 00:00:00" ? date('jS M, Y h:i:sa', strtotime($get['check_out_time'])) : "---" ?>
+                                                    <?= $get['check_out_time'] ? date('jS M, Y h:i:sa', strtotime($get['check_out_time'])) : "---" ?>
                                                 </td>
                                                 <td class="vVPassStatus"><?= $get['status'] ? "OUT" : "IN" ?></td>
                                                 <td>
                                                     <button class="btn btn-primary btn-xs viewVPassClk">View Pass</button>
-                                                    <input type="hidden" class="vVPassImg" value="<?= $get['img_url'] ?>">
+                                                    <input type="hidden" class="vVPassImg" value="<?= "visitors/".$get['img_url'] ?>">
                                                 </td>
                                             </tr>
                                             <?php $sn++; ?>
@@ -311,11 +311,10 @@ else {
                                 <th>Time In</th>
                                 <td id="vPassTimeIn"></td>
                             </tr>
-                            <!--
-                                <tr>
-                                    <th>Time Out</th>
-                                    <td id="vPassTimeOut">---</td>
-                                </tr>-->
+                            <tr>
+                                <th>Time Out</th>
+                                <td id="vPassTimeOut">---</td>
+                            </tr>
                         </table>
                     </div>
                 </div>
