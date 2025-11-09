@@ -1,0 +1,17 @@
+{
+    "name": "amirsanni/digipass",
+    "type": "project",
+    "description": "Digipass",
+    "authors": [
+        {
+            "name": "Amir Sanni",
+            "email": "amirsanni@gmail.com"
+        }
+    ],
+    "scripts": {
+        "deploy": "rsync -avz --delete --stats --exclude '.env' --exclude 'vendor' --exclude '.git' --exclude '.gitignore' --exclude 'nbproject' --exclude 'visitors' . amir@amirsanni.com:/var/www/1410inc.xyz/digipass/"
+    },
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
+}
